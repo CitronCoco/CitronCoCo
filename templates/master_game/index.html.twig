@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MasterGameController!{% endblock %}
+
+{% block stylesheets %}
+    <style>@import "{{ asset('css/main.css') }}";</style>
+{% endblock %}
+
+{% block body %}
+    {% for player in players %}
+        <div id="{{ player.id }}" data-name="{{ player.name }}">
+            {% for card in player.cards %}
+                <a class="card" data-flipable="true"><img class="" src="{{ asset(card.ImageUrl) }}" alt=""></a>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    <div id="turn">
+        <div>C'est au tour de <span>{{ players[0].name }}</span></div>
+    </div>
+    <div id="pioche">
+        <h1>{{ decksize }}</h1>
+    </div>
+    <div id="defausse">
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/main.js') }}"></script>
+{% endblock %}

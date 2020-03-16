@@ -1,0 +1,68 @@
+body{
+  width: 100vw;
+  height: auto;
+  div{
+    position: absolute;
+
+    &>a {
+      & > img {
+
+      }
+    }
+    &#turn{
+      right: 200px;
+      &>div{
+        width: 200px;
+      }
+    }
+    &#pioche{
+      left: 60%;
+      top: calc(50% - 141px/2);
+      width: 101px;
+      height: 141px;
+      border: 1px solid black;
+      text-align: center;
+    }
+    &#player_1{
+      top: 0;
+      width: 100%;
+      text-align: center;
+      &>a{
+        filter: brightness(0);
+        display: inline;
+      }
+    }
+    &#player_2{
+      top: 10%;
+      height: 80%;
+      width: 102px;
+      &>a {
+        filter: brightness(0);
+        display: block;
+      }
+    }
+    &#player_3{
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      &>a {
+        filter: brightness(0);
+        display: inline;
+      }
+    }
+    &#player_4{
+      height: 80%;
+      top: 10%;
+      right: 0;
+      &>a {
+        filter: brightness(0);
+        display: block;
+      }
+    }
+  }
+}
+
+.flipped{
+  filter: brightness(100%)!important;
+}
+
